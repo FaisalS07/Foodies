@@ -1,0 +1,39 @@
+table tr td img{
+    height:200px;
+    width:200px;
+
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-icon {
+    font-size: 22px;
+    height: 22px ;
+    width: 22px;
+    cursor: pointer;
+}
+
+th{
+    border: solid black;
+}
+
+.header {
+    text-align: right;
+    padding: 10px;
+    height: 40px;
+    
+}
+
+.scroll {
+    height: calc(100% - 40px);
+    overflow: auto;
+}
+
+th,tr,td {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 2px;
+  }

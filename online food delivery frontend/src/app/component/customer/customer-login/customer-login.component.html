@@ -1,0 +1,67 @@
+<div class="back">
+    <br><br><br><br><br><br>
+<div class="main customer-login" style="background-color: rgb(74, 13, 74);">
+    <h1>Sign In</h1>
+    <br />
+
+    <form [formGroup]="customerLoginForm">
+        <div class="item-icon">
+            <div class="icon">
+            </div>
+            <label style="font-size: 25px;"><b>Email-Id: &nbsp;</b></label>
+            <input type="text" id="email" formControlName="emailID" placeholder="Email">
+        </div>
+        <div *ngIf="customerLoginForm.controls['emailID'].invalid && (customerLoginForm.controls['emailID'].dirty)"
+            class="error-message">
+            <div *ngIf="customerLoginForm.controls['emailID'].errors?.['required']" style="font-size: 25px;">
+               <b> --------Email should not blank--------</b>
+            </div>
+            <div *ngIf="customerLoginForm.controls['emailID'].errors?.['pattern']" style="font-size: 25px;">
+               <b> --------Enter Valid email--------</b>
+            </div>
+        </div>
+
+        <br />
+        <div class="item-icon">
+            <div class="icon">
+            </div>
+            <label style="font-size: 25px;"><b>Password: &nbsp;</b></label>
+            <input type="password" formControlName="password" placeholder="Password">
+        </div>
+        <!-- Password Validation code -->
+        <div *ngIf="customerLoginForm.controls['password'].invalid && (customerLoginForm.controls['password'].dirty)"
+            class="error-message">
+            <div *ngIf="customerLoginForm.controls['password'].errors?.['required']" style="font-size: 25px;">
+                <b>--------Password should not be blank--------</b>
+            </div>
+            <div *ngIf="customerLoginForm.controls['password'].errors?.['minlength']" style="font-size: 25px;">
+               <b> --------Minimum 8 character required--------</b>
+            </div>
+        </div>
+        <!--End of Password Validation -->
+        <br />
+
+        <div>         
+            
+            
+             <button (click)="signIn()" mat-raised-button color="primary" style="background-color: rgb(130, 85, 130) ;color:rgb(254, 253, 254); font-size:25px;"
+                [disabled]="!customerLoginForm.controls['password'].valid || !customerLoginForm.controls['emailID'].valid"><b>Login</b></button> 
+                
+                <!-- <div *ngIf="!customerLoginForm.controls['password'].valid || !customerLoginForm.controls['emailID'].valid">
+                    <p><b>Please enter valid Email-Id and Password!!</b></p>
+                  </div> -->
+                
+        </div>
+    </form>
+    <br>
+    <div class="new-user-register">
+        <b>New-User?&nbsp;</b> <a href=""></a><span class="sign-up" (click)="routeToNewUser()">Register Now</span>
+    </div>
+    <br />
+    <div class="sign-up" (click)="routeToForgotPassword()">
+        Forgot password ?
+    </div>
+    <br />
+</div><br><br><br><br><br><br>
+</div>
+

@@ -1,0 +1,29 @@
+.customer-login {
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: rgba(233, 233, 240, 0.932) 0px 4px 7px 12px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(106, 25, 106);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+
+}
+
+.error-message {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.sign-up {
+    background-color: rgb(74, 13, 74);
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+}
+.back{
+    background-color: beige;
+}
+

@@ -1,0 +1,12 @@
+h1{
+    color: rgb(71, 4, 92);
+    text-align: center;
+    text-size-adjust: inherit;
+    background-color: beige;
+    font-size: 40px;
+    font-weight: 900;
+}
+.back{
+    background-color: beige;
+    text-align: center;
+}

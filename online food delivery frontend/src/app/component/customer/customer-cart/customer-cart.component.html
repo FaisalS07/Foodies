@@ -1,0 +1,35 @@
+<div class="back"><br /><br />
+<div *ngIf="cartList.length===0" class="centered">
+    ---------No food available in cart---------
+</div>
+<div *ngIf="cartList.length>0" class="centered">
+<table border="1">
+    <tr>
+        <th>Food Name</th>
+        <th>Image</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th></th>
+        </tr>
+    <tr *ngFor="let cart of cartList">
+        <td>{{cart?.food?.foodname}}</td>
+        <td><img [src]="cart?.food?.image" /></td>
+        <!-- <td><button (click)="onIncreaseQunatity(cart)" class="button-padding">+</button>{{cart?.quantity}}<button (click)="onDecreaseQunatity(cart)" class="button-padding">-</button></td>-->
+        <td>{{cart?.quantity}}</td>
+        <td>{{cart?.mrpPrice}}</td>
+        <td>{{getTotal(cart?.quantity,cart?.mrpPrice)}}</td>
+        <td><button (click)="deleteCart(cart)" mat-raised-button color="primary" style="background-color: rgb(72, 16, 85) ;color:rgb(249, 229, 254);">Delete Cart</button></td>
+        
+
+
+    </tr>
+</table>
+
+</div>
+<br />
+<div class="centered" *ngIf="cartList.length!==0">
+    <b>Grand Total: </b>&nbsp;&nbsp;{{grandTotal}} &nbsp;&nbsp;<button (click)="placeOrder()" mat-raised-button color="primary" style="background-color: rgb(72, 16, 85) ;color:rgb(249, 229, 254);">Place Order</button>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>

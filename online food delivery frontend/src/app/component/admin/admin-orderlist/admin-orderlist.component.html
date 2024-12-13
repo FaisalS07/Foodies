@@ -1,0 +1,32 @@
+<div class="back">
+    <br /> <br /><br><br>
+
+<div class="centered ">
+    <mat-form-field>
+        <input matInput [max]="today" [matDatepicker]="picker" placeholder="Choose a date" (dateChange)="changeDate($event)">
+        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+        <mat-datepicker #picker ></mat-datepicker>
+      </mat-form-field>
+</div>
+   
+
+
+<br /> <br />
+<div *ngIf="orderList.length>0" class="centered">
+    <table border="1">
+        <tr>
+            <th>Order Date</th>
+            <th>Total price</th>
+            <th>Order Status</th>
+            <th>Payment Status</th>
+        </tr>
+        <tr *ngFor="let order of orderList">
+            <td>{{getDate(order?.orderedDate)}}</td>
+            <td>{{order?.totalPrice}}</td>
+            <td>{{order?.orderStatus === 'success' ? 'Order not confirmed' : order?.orderStatus}}</td>
+            <td>{{order?.paymentStatus === 'success' ? 'UnPaid' : order?.paymentStatus}}</td>
+        </tr>
+    </table>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>

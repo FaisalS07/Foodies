@@ -1,0 +1,12 @@
+.container {
+    border-radius: 5px;
+    box-shadow: rgba(44, 44, 48, 0.897) 0px 4px 7px 12px;
+    padding: 20px;
+  }
+  .contact{
+    color: black;
+    font-size: 25px;
+  }
+  .back{
+    background-color: beige;
+  }

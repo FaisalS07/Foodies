@@ -1,0 +1,7 @@
+<app-app-header *ngIf="!isLoggedIn && !isAdminLoggedIn"></app-app-header> 
+<app-customer-header *ngIf="isLoggedIn && !isAdminLoggedIn"></app-customer-header>
+<app-admin-header *ngIf="!isLoggedIn && isAdminLoggedIn"></app-admin-header>
+<router-outlet></router-outlet>
+
+<!-- footer -->
+<app-footer></app-footer>

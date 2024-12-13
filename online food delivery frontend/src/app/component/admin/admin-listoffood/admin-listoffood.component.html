@@ -1,0 +1,55 @@
+<div class="back">
+    <br><br>
+<div class="centered">
+    Select Cateogry :&nbsp;   <select [(ngModel)]="category" (change)="getFoodByCategory()">
+        <option [value]="100">All</option>
+        <option *ngFor="let item of getCategoryList" [value]="item?.value">{{item?.name}}</option>
+    </select>
+</div>
+<br />
+<div *ngIf="foodList.length===0" class="centered">
+    ---------No food is available in list--------
+</div>
+<div *ngIf="foodList.length>0" class="centered">
+<table border="1" style="border: 1px solid black;">
+    <tr>
+        <th>Food Id</th>
+        <th>Food Name</th>
+        <th>Food Description</th>
+        <th>Food Image</th>
+        <th>Food MRP</th>
+        <th>Food Quantity</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor="let food of foodList">
+        <td>{{food?.foodId}}</td>
+        <td>{{food?.foodname}}</td>
+        <td>{{food?.description}}</td>
+        <td><img [src]="food?.image" /></td>
+        <td>{{food?.mrpPrice}}</td>
+        <td>{{food?.quantity}}</td>
+        
+        <td>
+            <mat-icon title="Edit" (click)="editFood(food)">edit</mat-icon>
+        </td>
+        <td>
+            <mat-icon title="Delete" (click)="delFood(food)">delete</mat-icon>
+        </td>
+</table>
+</div>
+<br />
+<div *ngIf="foodList.length>0" class="centered">
+    <app-paging
+    [totalItem]="totalItem"
+    [pageSize]="pageSize"
+    [offset]="offset"
+    (onNextPageClick)="onNextPageClick($event)"
+    (onPreviousPageClick)="onPreviousPageClick($event)"
+    (onFirstPageClick)="onFirstPageClick($event)"
+    (onLastPageClick)="onLastPageClick($event)"
+></app-paging>
+</div>
+<br />
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>

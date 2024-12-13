@@ -1,0 +1,30 @@
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0px;
+}
+table tr td{
+        padding: 10px
+}
+.add-food-tab {
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: rgb(109 109 125 / 28%) 0px 4px 7px 12px;
+    padding: 20px;
+    background-color: white;
+    color: rgb(72, 16, 85);
+}
+.centered {
+    display: flex;
+    justify-content: center;
+}
+.back{
+    background-color: beige;
+    font-size: 25px;
+    font-weight: 600;
+}
+h1{
+    font-weight: 800;
+    font-size: 40px;
+    font-family: cursive;
+}

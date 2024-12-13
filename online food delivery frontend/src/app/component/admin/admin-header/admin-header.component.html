@@ -1,0 +1,22 @@
+<div class="main">
+    <div> <div><a class="logo"><b>
+        
+        Foodies</b></a></div></div>
+    <div (click)="routerToLink('/admin/home')" [class.selected]="url === '/admin/home'">Home</div>
+    <div (click)="routerToLink('/admin/food')" [class.selected]="url === '/admin/food'">Add Items</div>
+    <div (click)="routerToLink('/admin/listoffood')" [class.selected]="url === '/admin/listoffood'">List Items</div>
+    <div (click)="routerToLink('/admin/orderlist')" [class.selected]="url === '/admin/orderlist'">Order List</div>
+    <div [matMenuTriggerFor]="menu" class="user-name-item">
+        <div>{{userName}}&nbsp;</div>
+        <div>
+            <mat-icon>expand_more</mat-icon>
+        </div>
+    </div>
+</div>
+
+<mat-menu #menu="matMenu">
+    <button (click)="routerToLink('/admin/logout')" mat-menu-item>
+        <mat-icon>logout</mat-icon> Logout
+    </button>
+
+</mat-menu>

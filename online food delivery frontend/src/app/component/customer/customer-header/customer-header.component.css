@@ -1,0 +1,41 @@
+.main
+{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    padding: 30px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-decoration-color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+.main > .selected {
+    background: rgb(72, 16, 85);
+    display: flex;
+    color: rgb(249, 229, 254);
+    height: 100%;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    font-weight: 500;
+}
+.main img {
+    height: 3em;
+    width: 240px;
+    padding-top: 20px;
+}
+.main div
+{
+    cursor: pointer;
+}
+.user-name-item {
+    display: flex;
+    align-items: center;
+}
+.main .logo{
+    font-size: 80px;
+    font-family: cursive;
+}

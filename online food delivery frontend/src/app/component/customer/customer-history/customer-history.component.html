@@ -1,0 +1,26 @@
+<div class="header">
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+</div>
+
+<div class="scroll centered">
+    <div *ngIf="food.length === 0">
+        There is not any item in the Order
+    </div>
+    <div *ngIf="food.length > 0">
+        <table border="1">
+            <tr>
+                <th>Food Id</th>
+                <th>Food Name</th>
+                <th>Category</th>
+                <th>Food Image</th>
+                <th>Food MRP</th>
+            </tr>
+            <tr *ngFor="let food of food">
+                <td>{{food?.foodId}}</td>
+                <td>{{food?.foodname}}</td>
+                <td>{{food?.category}}</td>
+                <td><img [src]="food?.image" /></td>
+                <td>{{food?.mrpPrice}}</td>
+        </table>
+    </div>
+</div>
